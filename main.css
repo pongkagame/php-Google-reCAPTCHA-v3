@@ -1,0 +1,58 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+body {
+    background-color: rgb(23, 177, 118);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.title {
+    text-align: center;
+    margin-bottom: 2%;
+    color: green;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+form{
+    display: block;
+    border: 2px dotted white;
+    padding: 2%;
+}
+form .form-item {
+    padding-bottom: 20px;
+}
+form input, textarea {
+    width: 100%;
+    border-radius: 5px;
+    border-style: unset;
+    padding: 2%;
+}
+button {
+    background-color: black;
+    color: white;
+    border-radius: 20%;
+    padding: 2%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.g-recaptcha{
+    margin-bottom: 20px;
+}
+button:hover {
+    background-color: green;
+}
