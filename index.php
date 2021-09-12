@@ -35,7 +35,9 @@
             <textarea name="my-message" id="" cols="30" rows="10"></textarea>
             </div>
             <input type="hidden" name="token" id="token"/><br>
+            <!-- Inline Google reCAPTCHA -->
             <div class="g-recaptcha" id="my-captcha"></div>
+            <!-- End Inline Google reCAPTCHA -->
             <button name="submit" type="submit" data-sitekey="SITE_KEY" id="my-submit">Send</button>
         </form>
     </div>

@@ -1,10 +1,11 @@
 <?php
     if(isset($_POST['submit'])){
-
+        //Variable Input Form
         $name = $_POST['my-name'];
         $email = $_POST['my-email'];
         $message = $_POST['my-message'];
 
+        //Initialize data verify CAPTCHA
         $url = 'https://www.google.com/recaptcha/api/siteverify';
         
         $data = [
@@ -13,7 +14,7 @@
         ];
     
         $get_response = json_decode(file_get_contents($url . '?secret='. $data['secret'] .'&response=' . $data['response']), true);
-
+        //Handle response CAPTCHA 
         if ($get_response['success'] == true ){
             session_start();
             $_SESSION['APP'] = $_POST['my-name'];
