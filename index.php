@@ -1,8 +1,9 @@
-<?php 
-    session_start();
+<?php
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en" class="js">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,30 +12,33 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </head>
+
 <body>
     <div class="container">
         <div class="title">
-            <a href="https://pongxkagame.blogspot.com"><h3>Example Google reCAPTHCA v3</h3></a>
+            <a href="https://pongxkagame.blogspot.com">
+                <h3>Example Google reCAPTCHA v3</h3>
+            </a>
             <?php if (isset($_SESSION['APP'])): ?>
                 <h4 style="color:blue;">Sending success to <?php echo $_SESSION['APP']; ?></h4>
-            <?php elseif (isset($_SESSION['ERROR'])): ?>
+                <?php elseif (isset($_SESSION['ERROR'])): ?>
                 <h4 style="color:red;">Fill the form again! <?php print_r($_SESSION['ERROR']); ?></h4>
-            <?php endif; ?>
+                <?php endif; ?>
         </div>
         <form id="my-form" action="action.php" method="POST">
             <div class="form-item">
-            <label for="myName">Name</label><br>
-            <input type="text" name="my-name"/>
+                <label for="myName">Name</label><br>
+                <input type="text" name="my-name" />
             </div>
             <div class="form-item">
-            <label for="myEmail">Email</label><br>
-            <input type="email" name="my-email"/>
+                <label for="myEmail">Email</label><br>
+                <input type="email" name="my-email" />
             </div>
             <div class="form-item">
-            <label for="myMessage">Message</label><br>
-            <textarea name="my-message" id="" cols="30" rows="10"></textarea>
+                <label for="myMessage">Message</label><br>
+                <textarea name="my-message" id="" cols="30" rows="10"></textarea>
             </div>
-            <input type="hidden" name="token" id="token"/><br>
+            <input type="hidden" name="token" id="token" /><br>
             <!-- Inline Google reCAPTCHA -->
             <div class="g-recaptcha" id="my-captcha"></div>
             <!-- End Inline Google reCAPTCHA -->
@@ -43,4 +47,5 @@
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
